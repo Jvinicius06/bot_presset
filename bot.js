@@ -152,7 +152,7 @@ async function deliverPreset(i, citizenid) {
         return i.editReply('Preset não encontrado ou esse personagem não pertence a você.');
     }
     const file = new AttachmentBuilder(
-        Buffer.from(JSON.stringify(preset)),
+        Buffer.from(JSON.stringify(preset.skin)),
         { name: `${citizenid}.json` }
     );
     return i.editReply({
